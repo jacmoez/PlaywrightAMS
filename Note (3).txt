@@ -1,0 +1,52 @@
+Intall python
+python3 --version
+
+mkdir playwright-python-project
+cd playwright-python-project
+
+Window
+python -m venv venv
+venv\Scripts\activate
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install playwright pytest pytest-playwright
+
+All browser
+playwright install
+playwright install chromium
+playwright install firefox
+playwright install webkit
+
+python -m playwright install chromium
+python -m playwright install firefox
+
+tests/test_example.py
+pytest --headed
+pytest --browser chromium
+pytest --browser firefox
+pytest --browser webkit
+
+playwright: command not found
+python -m playwright install
+playwright install
+
+==========================================
+mkdir playwright-python-project && cd playwright-python-project
+
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+pip install playwright pytest pytest-playwright
+
+playwright install
+
+pytest --headed  
+pytest --headed --browser chromium 
+===========================================

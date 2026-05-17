@@ -53,7 +53,7 @@ class SauceDemoTestRunner:
             headless=False, 
             args=["--start-maximized"]
         )
-        # self.context = self.browser.new_context(viewport={"width": 412, "height": 915})
+        self.context = self.browser.new_context(viewport={"width": 412, "height": 915})
         self.page = self.context.new_page()
         
     def open_browser(self):

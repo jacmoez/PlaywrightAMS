@@ -5,6 +5,16 @@ import time
 
 @pytest.fixture(scope="module")
 def shared_page():
+    with sync_playwright() as p:
+        browser=p.chromium.launch(headless=False,args=["--start-maximized"])
+        context=browser.new_context(no_viewport=True)
+        page=context.new_page()
+        yield page
+        context.close()
+        browser.close()
+
+@pytest.fixture(scope="module")
+def shared_page():
     """Opens one browser session for the entire test file."""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False, args=["--start-maximized"])

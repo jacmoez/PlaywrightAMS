@@ -841,7 +841,7 @@ def test_wysiwyg_editor(page: Page):
     print(f'Result 1: {result_updated.strip()}')
 
 
-def test_record_trace(page: Page):
+def test_resource(page: Page):
     # Start the stopwatch
     start_time = time.time()
     page.goto('https://the-internet.herokuapp.com/slow')
